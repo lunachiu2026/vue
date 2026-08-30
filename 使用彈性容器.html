@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用彈性容器設計簡易網頁佈局</title>
+    <style>
+        html,
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        #flctn {
+            width: 100%;
+            height: 1024px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        header {
+            width: 100%;
+            height: 15%;
+            background-color: lightpink;
+        }
+
+        nav {
+            width: 20%;
+            height: 70%;
+            background-color: lightyellow;
+        }
+
+        section {
+            width: 60%;
+            height: 70%;
+            background-color: pink;
+        }
+
+        aside {
+            width: 20%;
+            height: 70%;
+        }
+
+        footer {
+            width: 100%;
+            height: 15%;
+            background-color: yellow;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .abc {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .def {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px dotted red;
+            margin: 5px;
+            width: 400px;
+            /*請嘗試修改水平與垂直對齊方式*/
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div>div {
+            width: 80px;
+            height: 40px;
+            background-color: #eee;
+            border: 1px solid;
+            border-radius: 0.3em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flctn">
+        <header class="abc">
+            <div class="def">
+                <div>春季特賣</div>
+                <div>夏季特賣</div>
+                <div>秋季特賣</div>
+                <div>冬季特賣</div>
+            </div>
+            <div>
+                <div class="def">
+                    <div>服飾</div>
+                    <div>配件</div>
+                    <div>鞋款</div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>台北</li>
+                <li>台中</li>
+                <li>高雄</li>
+            </ul>
+        </nav>
+        <section>
+            <h1>我是內文</h1>
+        </section>
+        <aside>
+            <h1>我是右側欄</h1>
+        </aside>
+        <footer>
+            <h1>我是頁尾區</h1>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
